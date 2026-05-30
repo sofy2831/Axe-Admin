@@ -59,7 +59,8 @@
     header {
       padding: 28px 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(247, 245, 240, 0.92);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
       z-index: 20;
@@ -108,7 +109,7 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 0.74rem;
-      color: var(--yellow);
+      color: var(--accent);
       font-weight: 700;
       margin-bottom: 18px;
     }
@@ -168,7 +169,7 @@
   color: #b88a00;
 }
     .btn-secondary:hover {
-      border-color: var(--yellow);
+      border-color: var(--accent);
     }
 
     .hero-card {
@@ -204,7 +205,7 @@
       content: "•";
       position: absolute;
       left: 0;
-      color: var(--yellow);
+      color: var(--accent);
       font-weight: bold;
     }
 
@@ -246,7 +247,7 @@
 
     .service-card .num {
       font-family: Arial, sans-serif;
-      color: var(--yellow);
+      color: var(--accent);
       font-weight: 800;
       font-size: 0.85rem;
       margin-bottom: 14px;
@@ -278,7 +279,7 @@
       font-family: Arial, sans-serif;
       font-weight: 700;
       color: var(--primary);
-      border-bottom: 1px solid var(--yellow);
+      border-bottom: 1px solid var(--accent);
       padding-bottom: 3px;
     }
 
@@ -306,7 +307,7 @@
     }
 
     .trust-item {
-      border-left: 2px solid var(--yellow);
+      border-left: 2px solid var(--accent);
       padding-left: 20px;
     }
 
@@ -341,7 +342,7 @@
     }
 
     .page-link:hover {
-      border-color: var(--yellow);
+      border-color: var(--accent);
       transform: translateY(-2px);
       transition: 0.2s ease;
     }
@@ -376,7 +377,7 @@
       font-family: Arial, sans-serif;
       font-weight: 800;
       color: var(--primary);
-      border-bottom: 2px solid var(--yellow);
+      border-bottom: 2px solid var(--accent);
       font-size: 1.05rem;
     }
 
@@ -413,7 +414,10 @@
       .hero {
         padding-top: 62px;
       }
-
+.brand img {
+  height: 62px;
+  display: block;
+}
       .trust,
       .contact {
         padding: 34px;
@@ -425,7 +429,9 @@
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="index.html">Axe Admin</a>
+     <a class="brand" href="index.html">
+  <img src="images/axe-admin-cover.png" alt="Axe Admin" />
+</a>
       <nav class="nav-links" aria-label="Navigation principale">
         <a href="#services">Services</a>
         <a href="#paie">Paie & RH</a>
