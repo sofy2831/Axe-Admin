@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Axe Admin — Assistance administrative TPE & indépendants</title>
+  <meta name="description" content="Axe Admin accompagne les TPE, indépendants et petites entreprises dans leur gestion administrative : devis, factures, paie, documents salariés, rédaction administrative et préparation documentaire." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://axe-admin.fr/" />
+
+  <meta property="og:title" content="Axe Admin — Assistance administrative TPE & indépendants" />
+  <meta property="og:description" content="Une professionnelle indépendante expérimentée pour accompagner les petites entreprises dans leur administratif, leur paie, leurs devis, leurs factures et leurs courriers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://axe-admin.fr/" />
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --paper: #ffffff;
+      --ink: #1d2430;
+      --muted: #6d7280;
+      --line: #e4ded3;
+      --navy: #172033;
+      --gold: #b8955b;
+      --soft: #efe8dc;
+      --radius: 22px;
+      --shadow: 0 24px 60px rgba(23, 32, 51, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 245, 240, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.74rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      color: var(--navy);
+      margin-bottom: 28px;
+    }
+
+    .lead {
+      font-size: 1.28rem;
+      color: #384152;
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: #fff;
+      box-shadow: 0 16px 36px rgba(23, 32, 51, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #0f1728;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+    }
+
+    .hero-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      font-size: 1.55rem;
+      color: var(--navy);
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      font-family: Arial, sans-serif;
+      color: #3d4656;
+      font-size: 0.98rem;
+    }
+
+    .hero-card li {
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .hero-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-head {
+      max-width: 790px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 18px 42px rgba(23, 32, 51, 0.06);
+    }
+
+    .service-card .num {
+      font-family: Arial, sans-serif;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 1.55rem;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      color: #4a5260;
+      margin-bottom: 18px;
+    }
+
+    .service-card ul {
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      display: grid;
+      gap: 8px;
+      padding-left: 18px;
+      margin-bottom: 18px;
+    }
+
+    .service-card a {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+    }
+
+    .trust {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 34px;
+      padding: 54px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 36px;
+      align-items: start;
+      box-shadow: var(--shadow);
+    }
+
+    .trust h2 {
+      font-size: clamp(2rem, 3vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .trust-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .trust-item {
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+    }
+
+    .trust-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .trust-item p {
+      color: #d8dbe2;
+      font-family: Arial, sans-serif;
+      font-size: 0.96rem;
+    }
+
+    .pages {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .page-link {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      font-family: Arial, sans-serif;
+      color: var(--navy);
+      font-weight: 700;
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+    }
+
+    .page-link:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      transition: 0.2s ease;
+    }
+
+    .contact {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 54px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact h2 {
+      font-size: clamp(2rem, 3vw, 3.3rem);
+      color: var(--navy);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 24px;
+      font-size: 1.08rem;
+    }
+
+    .email {
+      display: inline-flex;
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      font-weight: 800;
+      color: var(--navy);
+      border-bottom: 2px solid var(--gold);
+      font-size: 1.05rem;
+    }
+
+    footer {
+      padding: 34px 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .trust {
+        grid-template-columns: 1fr;
+      }
+
+      .services,
+      .pages {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .trust,
+      .contact {
+        padding: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Axe Admin</a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#paie">Paie & RH</a>
+        <a href="#redaction">Rédaction</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Assistance administrative TPE & indépendants</div>
+          <h1>Une gestion administrative claire, structurée et professionnelle.</h1>
+          <p class="lead">
+            Axe Admin accompagne les petites entreprises, artisans, indépendants et cabinets dans leurs démarches administratives,
+            leurs devis, leurs factures, leur paie, leurs documents salariés et leurs courriers sensibles.
+          </p>
+          <p class="lead">
+            Une professionnelle indépendante expérimentée pour reprendre de l’ordre, sécuriser les échanges et avancer concrètement,
+            sans alourdir votre organisation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:contact@axe-dossier.fr">Contacter Axe Admin</a>
+            <a class="btn btn-secondary" href="#services">Voir les accompagnements</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Pour les entreprises qui n’ont plus le temps de gérer la paperasse.</h2>
+          <ul>
+            <li>Administratif quotidien et organisation documentaire</li>
+            <li>Création de devis, factures et relances clients</li>
+            <li>Assistance paie, documents salariés et solde de tout compte</li>
+            <li>Rédaction administrative et préparation de dossiers sensibles</li>
+            <li>Intervention ponctuelle ou accompagnement selon le besoin</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Domaines d’intervention</div>
+          <h2>Une assistance administrative pensée pour la vraie vie des petites entreprises.</h2>
+          <p>
+            Axe Admin intervient là où les TPE perdent du temps : documents à produire, courriers à rédiger,
+            facturation à suivre, paie à comprendre, dossiers à structurer.
+          </p>
+        </div>
+
+        <div class="services">
+          <article class="service-card">
+            <div class="num">01</div>
+            <h3>Administratif quotidien</h3>
+            <p>
+              Pour les dirigeants débordés par les mails, les papiers, les documents à classer et les démarches qui s’accumulent.
+            </p>
+            <ul>
+              <li>Courriers administratifs</li>
+              <li>Organisation et classement des dossiers</li>
+              <li>Suivi administratif courant</li>
+              <li>Gestion documentaire TPE</li>
+              <li>Appui ponctuel ou régulier</li>
+            </ul>
+            <a href="entreprise-debordee-administratif.html">Entreprise débordée par l’administratif</a>
+          </article>
+
+          <article class="service-card">
+            <div class="num">02</div>
+            <h3>Devis, facturation & impayés</h3>
+            <p>
+              Pour les artisans, indépendants et petites entreprises qui doivent produire leurs devis, facturer correctement
+              et suivre leurs règlements.
+            </p>
+            <ul>
+              <li>Création de devis</li>
+              <li>Création et suivi de factures</li>
+              <li>Relances clients</li>
+              <li>Suivi des impayés</li>
+              <li>Préparation de courriers de relance</li>
+            </ul>
+            <a href="je-n-ai-pas-le-temps-de-faire-mes-devis.html">Je n’ai pas le temps de faire mes devis</a>
+          </article>
+
+          <article class="service-card" id="paie">
+            <div class="num">03</div>
+            <h3>Paie, RH & salariés</h3>
+            <p>
+              Pour les petites entreprises qui ont besoin d’aide sur les bulletins, les documents salariés, les départs
+              et les obligations sociales courantes.
+            </p>
+            <ul>
+              <li>Préparation ou réalisation de bulletins de salaire</li>
+              <li>Gestion sur le logiciel paie de l’entreprise</li>
+              <li>Externalisation possible selon le volume</li>
+              <li>Solde de tout compte et documents de fin de contrat</li>
+              <li>Accompagnement DSN avec accord et accès du client</li>
+            </ul>
+            <a href="je-n-arrive-pas-a-faire-la-paie.html">Je n’arrive pas à faire la paie</a>
+          </article>
+
+          <article class="service-card" id="redaction">
+            <div class="num">04</div>
+            <h3>Rédaction administrative & dossiers sensibles</h3>
+            <p>
+              Pour les entreprises, cabinets et particuliers ayant besoin d’une rédaction claire, structurée et exploitable :
+              courriers, chronologies, dossiers préparatoires et pièces organisées.
+            </p>
+            <ul>
+              <li>Courriers administratifs argumentés</li>
+              <li>Rédaction de courriers pour dossiers notaire, avocat ou prud’homal</li>
+              <li>Chronologies factuelles</li>
+              <li>Préparation documentaire</li>
+              <li>Organisation des pièces et synthèse de dossier</li>
+            </ul>
+            <a href="assistance-documentaire-cabinet-juridique.html">Assistance rédactionnelle pour cabinets</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap trust">
+        <div>
+          <div class="eyebrow">Méthode</div>
+          <h2>Une approche sérieuse, directe et structurée.</h2>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-item">
+            <h3>Un interlocuteur expérimenté</h3>
+            <p>
+              Vous échangez avec une professionnelle indépendante habituée à traiter des documents administratifs,
+              sociaux, comptables et rédactionnels.
+            </p>
+          </div>
+
+          <div class="trust-item">
+            <h3>Un cadre clair</h3>
+            <p>
+              Chaque demande est cadrée selon le besoin réel : documents à produire, éléments à transmettre,
+              délais, validation et périmètre d’intervention.
+            </p>
+          </div>
+
+          <div class="trust-item">
+            <h3>Une rédaction exploitable</h3>
+            <p>
+              Les courriers et dossiers sont structurés pour être compréhensibles, cohérents et utilisables par l’entreprise,
+              un cabinet, un organisme ou un interlocuteur professionnel.
+            </p>
+          </div>
+
+          <div class="trust-item">
+            <h3>Une intervention sans confusion</h3>
+            <p>
+              Axe Admin intervient en assistance administrative, rédactionnelle et documentaire. Les missions ne remplacent pas
+              l’intervention d’un avocat, d’un expert-comptable ou d’un conseil réglementé lorsque leur intervention est nécessaire.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Pages utiles</div>
+          <h2>Vos problématiques les plus fréquentes.</h2>
+          <p>
+            Quelques situations concrètes rencontrées par les petites entreprises : administratif qui s’accumule,
+            devis en retard, factures impayées, paie difficile, départ salarié ou dossier à préparer.
+          </p>
+        </div>
+
+        <div class="pages">
+          <a class="page-link" href="assistance-administrative-tpe.html">Assistance administrative TPE</a>
+          <a class="page-link" href="entreprise-debordee-administratif.html">Entreprise débordée par l’administratif</a>
+          <a class="page-link" href="artisan-paperasse.html">Artisan et paperasse administrative</a>
+          <a class="page-link" href="je-n-ai-pas-le-temps-de-faire-mes-devis.html">Je n’ai pas le temps de faire mes devis</a>
+          <a class="page-link" href="client-ne-paie-pas-facture.html">Client qui ne paie pas sa facture</a>
+          <a class="page-link" href="je-n-arrive-pas-a-faire-la-paie.html">Je n’arrive pas à faire la paie</a>
+          <a class="page-link" href="comment-faire-solde-de-tout-compte-employeur.html">Solde de tout compte employeur</a>
+          <a class="page-link" href="assistance-documentaire-cabinet-juridique.html">Assistance rédactionnelle pour cabinets</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div class="eyebrow">Contact</div>
+        <h2>Besoin d’un appui administratif, paie ou rédactionnel ?</h2>
+        <p>
+          Présentez simplement votre besoin : administratif quotidien, devis, facturation, paie, documents salariés,
+          rédaction de courrier ou préparation documentaire.
+        </p>
+        <a class="email" href="mailto:contact@axe-dossier.fr">contact@axe-dossier.fr</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Axe Admin — Assistance administrative TPE & indépendants</span>
+      <span>Assistance administrative, paie, rédaction et préparation documentaire</span>
+    </div>
+  </footer>
+</body>
+</html>
