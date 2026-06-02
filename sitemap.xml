@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://axe-admin.fr/</loc>
+    <loc>https://admin.axe-dossier.fr/</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/entreprise-debordee-administratif.html</loc>
+    <loc>https://admin.axe-dossier.fr/entreprise-debordee-administratif.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/je-n-ai-pas-le-temps-de-faire-mes-devis.html</loc>
+    <loc>https://admin.axe-dossier.fr/je-n-ai-pas-le-temps-de-faire-mes-devis.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/je-n-arrive-pas-a-faire-la-paie.html</loc>
+    <loc>https://admin.axe-dossier.fr/je-n-arrive-pas-a-faire-la-paie.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/artisan-paperasse.html</loc>
+    <loc>https://admin.axe-dossier.fr/artisan-paperasse.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/client-ne-paie-pas-facture.html</loc>
+    <loc>https://admin.axe-dossier.fr/client-ne-paie-pas-facture.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/comment-faire-solde-de-tout-compte-employeur.html</loc>
+    <loc>https://admin.axe-dossier.fr/comment-faire-solde-de-tout-compte-employeur.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/assistance-documentaire-cabinet-juridique.html</loc>
+    <loc>https://admin.axe-dossier.fr/assistance-documentaire-cabinet-juridique.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
   <url>
-    <loc>https://axe-admin.fr/assistance-administrative-tpe.html</loc>
+    <loc>https://admin.axe-dossier.fr/assistance-administrative-tpe.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
+
 </urlset>
