@@ -7,46 +7,36 @@
   <title>Axe Admin — Direction administrative externalisée</title>
   <meta name="description" content="Axe Admin accompagne les TPE, indépendants, artisans et cabinets dans leur gestion administrative : devis, factures, paie, documents salariés, rédaction administrative et préparation documentaire." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://axe-admin.fr/" />
+  <link rel="canonical" href="https://admin.axe-dossier.fr/" />
 
-   <meta name="google-site-verification" content="IfcyRjoiTZSDTpOFl08nLktH8HWznrqE0YFar0m2ZCs" />
+  <meta name="google-site-verification" content="IfcyRjoiTZSDTpOFl08nLktH8HWznrqE0YFar0m2ZCs" />
 
   <meta property="og:title" content="Axe Admin — Direction administrative externalisée" />
   <meta property="og:description" content="Une professionnelle indépendante expérimentée pour accompagner les petites entreprises dans leur administratif, leur paie, leurs devis, leurs factures et leurs courriers." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://axe-admin.fr/" />
+  <meta property="og:url" content="https://admin.axe-dossier.fr/" />
+  <meta property="og:image" content="https://admin.axe-dossier.fr/images/axe-admin-cover.png" />
 
   <style>
     :root {
       --bg: #96b3c2;
       --paper: rgba(255,255,255,0.92);
       --white: #ffffff;
-
       --ink: #111111;
       --muted: #42515a;
       --muted-2: #5f6b73;
       --line: rgba(0,0,0,0.10);
-
       --primary: #111111;
       --primary-soft: #222222;
-
       --accent: #ffde59;
       --accent-soft: rgba(255, 222, 89, 0.16);
-
       --radius: 24px;
       --shadow: 0 22px 55px rgba(0,0,0,0.10);
       --shadow-soft: 0 16px 40px rgba(0,0,0,0.07);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Georgia, "Times New Roman", serif;
@@ -58,43 +48,29 @@
       line-height: 1.65;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .wrap {
-      width: min(1160px, calc(100% - 40px));
-      margin: 0 auto;
-    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
 
     header {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(14px);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-}
-.nav {
-  min-height: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
 
-    .brand {
-      display: inline-flex;
+    .nav {
+      min-height: 120px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      gap: 24px;
     }
 
-    .brand img {
-      height: 120px;
-      width: auto;
-      display: block;
-    }
+    .brand { display: inline-flex; align-items: center; }
+    .brand img { height: 120px; width: auto; display: block; }
 
     .brand-text {
       font-family: Arial, sans-serif;
@@ -114,13 +90,9 @@
       color: var(--muted);
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-    }
+    .nav-links a:hover { color: var(--primary); }
 
-    .hero {
-      padding: 86px 0 76px;
-    }
+    .hero { padding: 86px 0 76px; }
 
     .hero-grid {
       display: grid;
@@ -249,9 +221,7 @@
       border-radius: 50%;
     }
 
-    section {
-      padding: 72px 0;
-    }
+    section { padding: 72px 0; }
 
     .section-head {
       max-width: 820px;
@@ -313,10 +283,7 @@
       margin-bottom: 14px;
     }
 
-    .service-card p {
-      color: #26333a;
-      margin-bottom: 18px;
-    }
+    .service-card p { color: #26333a; margin-bottom: 18px; }
 
     .service-card ul {
       font-family: Arial, sans-serif;
@@ -348,9 +315,7 @@
       box-shadow: var(--shadow);
     }
 
-    .trust .eyebrow {
-      color: #fff;
-    }
+    .trust .eyebrow { color: #fff; }
 
     .trust h2 {
       font-size: clamp(2rem, 3vw, 3.4rem);
@@ -358,25 +323,33 @@
       letter-spacing: -0.045em;
     }
 
-    .trust-grid {
-      display: grid;
-      gap: 18px;
-    }
+    .trust-grid { display: grid; gap: 18px; }
 
     .trust-item {
       border-left: 3px solid var(--accent);
       padding-left: 20px;
     }
 
-    .trust-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 6px;
-    }
+    .trust-item h3 { font-size: 1.2rem; margin-bottom: 6px; }
 
     .trust-item p {
       color: #dce4e7;
       font-family: Arial, sans-serif;
       font-size: 0.96rem;
+    }
+
+    .pages-group {
+      margin-bottom: 34px;
+    }
+
+    .pages-title {
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      margin-bottom: 14px;
     }
 
     .pages {
@@ -468,17 +441,9 @@
         grid-template-columns: 1fr;
       }
 
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        padding: 58px 0 48px;
-      }
-
-      .brand img {
-        height: 54px;
-      }
+      .nav-links { display: none; }
+      .hero { padding: 58px 0 48px; }
+      .brand img { height: 54px; }
 
       .trust,
       .contact,
@@ -488,25 +453,11 @@
     }
 
     @media (max-width: 560px) {
-      .wrap {
-        width: min(100% - 28px, 1160px);
-      }
-
-      header {
-        padding: 12px 0;
-      }
-
-      h1 {
-        font-size: clamp(2.2rem, 12vw, 3.2rem);
-      }
-
-      .lead {
-        font-size: 1.08rem;
-      }
-
-      .btn {
-        width: 100%;
-      }
+      .wrap { width: min(100% - 28px, 1160px); }
+      header { padding: 12px 0; }
+      h1 { font-size: clamp(2.2rem, 12vw, 3.2rem); }
+      .lead { font-size: 1.08rem; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
@@ -602,7 +553,7 @@
               <li>Suivi des impayés</li>
               <li>Préparation de courriers de relance</li>
             </ul>
-            <a href="je-n-ai-pas-le-temps-de-faire-mes-devis.html">Je n’ai pas le temps de faire mes devis</a>
+            <a href="gestion-facturation-tpe.html">Gestion facturation TPE</a>
           </article>
 
           <article class="service-card" id="paie">
@@ -619,7 +570,7 @@
               <li>Solde de tout compte et documents de fin de contrat</li>
               <li>Accompagnement DSN avec accord et accès du client</li>
             </ul>
-            <a href="je-n-arrive-pas-a-faire-la-paie.html">Je n’arrive pas à faire la paie</a>
+            <a href="externalisation-paie-tpe.html">Externalisation paie TPE</a>
           </article>
 
           <article class="service-card" id="redaction">
@@ -691,20 +642,52 @@
           <div class="eyebrow">Pages utiles</div>
           <h2>Vos problématiques les plus fréquentes.</h2>
           <p>
-            Quelques situations concrètes rencontrées par les petites entreprises : administratif qui s’accumule,
-            devis en retard, factures impayées, paie difficile, départ salarié ou dossier à préparer.
+            Les pages sont regroupées par besoin : administratif général, paie/RH, facturation/devis et dossiers rédactionnels.
           </p>
         </div>
 
-        <div class="pages">
-          <a class="page-link" href="assistance-administrative-tpe.html">Assistance administrative TPE</a>
-          <a class="page-link" href="entreprise-debordee-administratif.html">Entreprise débordée par l’administratif</a>
-          <a class="page-link" href="artisan-paperasse.html">Artisan et paperasse administrative</a>
-          <a class="page-link" href="je-n-ai-pas-le-temps-de-faire-mes-devis.html">Je n’ai pas le temps de faire mes devis</a>
-          <a class="page-link" href="client-ne-paie-pas-facture.html">Client qui ne paie pas sa facture</a>
-          <a class="page-link" href="je-n-arrive-pas-a-faire-la-paie.html">Je n’arrive pas à faire la paie</a>
-          <a class="page-link" href="comment-faire-solde-de-tout-compte-employeur.html">Solde de tout compte employeur</a>
-          <a class="page-link" href="assistance-documentaire-cabinet-juridique.html">Assistance rédactionnelle pour cabinets</a>
+        <div class="pages-group">
+          <div class="pages-title">Administratif quotidien</div>
+          <div class="pages">
+            <a class="page-link" href="assistance-administrative-tpe.html">Assistance administrative TPE</a>
+            <a class="page-link" href="entreprise-debordee-administratif.html">Entreprise débordée par l’administratif</a>
+            <a class="page-link" href="artisan-paperasse.html">Artisan et paperasse administrative</a>
+            <a class="page-link" href="administratif-autoentrepreneur.html">Administratif auto-entrepreneur</a>
+          </div>
+        </div>
+
+        <div class="pages-group">
+          <div class="pages-title">Paie, RH & salariés</div>
+          <div class="pages">
+            <a class="page-link" href="externalisation-paie-tpe.html">Externalisation paie TPE</a>
+            <a class="page-link" href="faire-les-bulletins-de-salaire.html">Faire les bulletins de salaire</a>
+            <a class="page-link" href="gestion-paie-artisan.html">Gestion paie artisan</a>
+            <a class="page-link" href="aide-dsn-net-entreprises.html">Aide DSN Net-Entreprises</a>
+            <a class="page-link" href="documents-entree-sortie-salarie.html">Documents entrée sortie salarié</a>
+            <a class="page-link" href="erreur-sur-bulletin-de-paie.html">Erreur sur bulletin de paie</a>
+            <a class="page-link" href="je-n-arrive-pas-a-faire-la-paie.html">Je n’arrive pas à faire la paie</a>
+            <a class="page-link" href="comment-faire-solde-de-tout-compte-employeur.html">Solde de tout compte employeur</a>
+          </div>
+        </div>
+
+        <div class="pages-group">
+          <div class="pages-title">Devis, factures & impayés</div>
+          <div class="pages">
+            <a class="page-link" href="gestion-facturation-tpe.html">Gestion facturation TPE</a>
+            <a class="page-link" href="creation-devis-professionnel.html">Création devis professionnel</a>
+            <a class="page-link" href="devis-factures-artisan.html">Devis et factures artisan</a>
+            <a class="page-link" href="suivi-factures-clients.html">Suivi factures clients</a>
+            <a class="page-link" href="relance-facture-impayee.html">Relance facture impayée</a>
+            <a class="page-link" href="je-n-ai-pas-le-temps-de-faire-mes-devis.html">Je n’ai pas le temps de faire mes devis</a>
+            <a class="page-link" href="client-ne-paie-pas-facture.html">Client qui ne paie pas sa facture</a>
+          </div>
+        </div>
+
+        <div class="pages-group">
+          <div class="pages-title">Rédaction & dossiers</div>
+          <div class="pages">
+            <a class="page-link" href="assistance-documentaire-cabinet-juridique.html">Assistance rédactionnelle pour cabinets</a>
+          </div>
         </div>
       </div>
     </section>
